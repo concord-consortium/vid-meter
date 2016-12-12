@@ -1,0 +1,18 @@
+language:
+  - node_js
+  - ruby
+node_js:
+  - 5
+rvm:
+  - 2.2.0
+install:
+  - travis_retry gem install s3_website -v 2.12.3
+  - travis_retry npm install
+before_script: webpack
+script:
+  - "npm run test"
+  - ./s3_deploy.sh
+cache:
+  bundler: true
+  directories:
+    - node_modules

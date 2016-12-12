@@ -1,0 +1,30 @@
+
+body {
+    margin: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.video-meter {
+    font-family: Helvetica, Arial, sans-serif;
+    width: 400px;
+    border-radius: 0.2em;
+    line-height: 2em;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    video {
+        display: none;
+        top: 0px;
+        left: 0px;
+        border:  5px solid gray;
+    }
+    canvas {
+        z-index: 1;
+        top: 0px;
+        left: 0px;
+    }
+}
