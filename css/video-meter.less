@@ -8,14 +8,14 @@ body {
 
 .video-meter {
     font-family: Helvetica, Arial, sans-serif;
-    width: 400px;
     border-radius: 0.2em;
     line-height: 2em;
     border: 1px solid black;
+    padding: 1em;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     video {
         display: none;
         top: 0px;
@@ -23,8 +23,23 @@ body {
         border:  5px solid gray;
     }
     canvas {
+        position: relative;
         z-index: 1;
         top: 0px;
         left: 0px;
+    }
+    .controlls {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    }
+    .buttons {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    input[type=range]{
+        width: 300px;
     }
 }
