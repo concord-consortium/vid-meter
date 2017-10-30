@@ -8,7 +8,6 @@ install:
   - travis_retry npm install
 before_script: webpack
 script:
-  - "npm run test"
   - ./s3_deploy.sh
 cache:
   bundler: true
